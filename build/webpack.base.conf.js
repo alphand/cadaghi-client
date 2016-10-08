@@ -2,6 +2,8 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var pathToBourbon = require('node-bourbon').includePaths
+
 
 module.exports = {
   entry: {
@@ -72,6 +74,10 @@ module.exports = {
         }
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [pathToBourbon],
+    outputStyle: 'expanded'
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')

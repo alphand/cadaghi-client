@@ -1,0 +1,39 @@
+.topbar__container {
+    @include container;
+    padding:10px;
+    background-color: $black;
+    color: $white;
+
+    &:after {
+        @include clearfix();
+    }
+}
+
+.topbar__box--left {
+    float:left;
+}
+
+.topbar__box--right {
+    float:right;
+}
+
+.topbarnav__list {
+    margin:0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0 10px;
+        list-style: none;
+        float: left;
+    }
+}
+
+.topbarnav_btn {
+  @include button(false, $white, $button-background-hover, $button-color, 'hollow');
+  margin:0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,14 @@
+$susy: (
+  columns: 12,
+  container: 1120px,
+  global-box-sizing: border-box;
+);
+
+.container--body {
+    @include susy-media(em(1120)) {
+        @include container(em(1120));        
+    }
+    @include susy-media(0 em(1120)) {
+        @include container(100%);
+    }
+}
