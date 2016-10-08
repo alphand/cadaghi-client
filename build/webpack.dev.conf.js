@@ -30,5 +30,15 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     })
-  ]
+  ],
+  dev: {
+    proxyTable: {
+      '/api/*': {
+        target: 'http://localhost:9090',
+        pathRewrite: {
+          '/api': ''
+        },
+      },
+    },
+  }
 })

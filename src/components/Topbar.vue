@@ -23,11 +23,11 @@
 
 <script>
 export default {
-    Name:'topbar',
-    data () {
-      return {
-        githubLoginUrl: "https://github.com/login/oauth/authorize?scope=user:email&client_id=6a418b2d916f57eb921c"
-      }
+  Name: 'topbar',
+  data() {
+    return {
+      githubLoginUrl: 'https://github.com/login/oauth/authorize?scope=user:email&client_id=6a418b2d916f57eb921c',
     }
+  },
 }
 </script>

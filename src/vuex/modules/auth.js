@@ -1,6 +1,8 @@
+/* eslint-disable no-param-reassign */
+
 import * as types from '../mutation-types'
 
-const state = {
+const initialState = {
   authStatus: 'unauthorized',
   user: {
     hasEmail: false,
@@ -9,16 +11,16 @@ const state = {
 }
 
 const mutations = {
-  [types.AUTH_LOGIN_REQUEST](state, { user }) {
+  [types.AUTH_LOGIN_REQUEST](state) {
     state.authStatus = 'processing'
   },
   [types.AUTH_GITHUB_REQUEST](state) {
     state.authStatus = 'processing'
   },
-  [types.AUTH_LOGIN_FAILURE](state, { user }) {
+  [types.AUTH_LOGIN_FAILURE](state) {
     state.authStatus = 'failed'
   },
-  [types.AUTH_LOGIN_SUCCESS](state, { user }) {
+  [types.AUTH_LOGIN_SUCCESS](state) {
     state.authStatus = 'success'
   },
   [types.AUTH_GITHUB_SUCCESS](state, token) {
@@ -26,7 +28,7 @@ const mutations = {
     state.user.token = token.access_token
     console.log('got token', state.user)
   },
-  [types.PROFILE_GITHUB_REQUEST](state) {
+  [types.PROFILE_GITHUB_REQUEST]() {
     console.log('gh request')
   },
   [types.PROFILE_GITHUB_SUCCESS](state, user) {
@@ -35,6 +37,6 @@ const mutations = {
 }
 
 export default {
-  state,
+  initialState,
   mutations,
 }

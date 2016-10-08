@@ -11,11 +11,11 @@
 import HeaderBanner from '../components/HeaderBanner.vue'
 
 export default {
-  components:{
-      HeaderBanner
+  components: {
+    HeaderBanner,
   },
   route: {
-    auth: false
-  }
+    auth: false,
+  },
 }
 </script>i

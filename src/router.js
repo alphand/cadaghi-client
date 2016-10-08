@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
-import Home from './containers/home.vue'
+import Home from './containers/Home.vue'
 // import Login from './containers/login.vue'
-// import Accounts from './containers/accounts.vue'
+import Accounts from './containers/Accounts.vue'
 
 // import AuthService from './services/auth'
 
@@ -11,7 +11,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
     // { path: '/login', component: Login },
-    // { path: '/accounts/:type', component: Accounts }
+    { path: '/accounts/:type', component: Accounts },
   ],
 })
 

@@ -1,3 +1,4 @@
+
 import Vue from 'vue'
 import Vuex from 'vuex'
 import * as actions from './actions'
@@ -18,6 +19,7 @@ const store = new Vuex.Store({
 })
 
 if (module.hot) {
+  /* eslint-disable global-require */
   module.hot.accept([
     './getters',
     './actions',
@@ -29,6 +31,7 @@ if (module.hot) {
       modules: require('./modules/auth'),
     })
   })
+  /* eslint-enable */
 }
 
 export default store
