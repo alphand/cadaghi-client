@@ -2,25 +2,25 @@
   <div class="container--body">
     <div class="accounts--page--section">
       <h1>Accounts</h1>
-    <ul>
-      <li>Coming from {{ $route.params.type }} - {{ $route.query.code }} {{ msg }} {{authStatus}}</li>
-    </ul>
 
-    <div>
-      there is user <button v-on:click="getEmail($event)">Get email</button> {{ user.token }}
+      <p>
+        Some detailed status
+      </p>
+
+      <pre>
+        param type: {{ $route.params.type }}
+        code: {{ $route.query.code }}
+        msg: {{ msg }}
+        authStatus: {{ authStatus }}
+        user: {{ user }}
+      </pre>
+
+      <Card>
+      </Card>
     </div>
-
-    <div v-if="user.email != ''">
-      my email: {{ user.email }}
-    </div>
-
-    <Card>
-    </Card>
-
-    </div>
-
   </div>
 </template>
+
 
 <script>
   import { mapGetters, mapActions } from 'vuex'

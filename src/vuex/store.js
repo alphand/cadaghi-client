@@ -10,12 +10,13 @@ Vue.use(Vuex)
 const debug = process.env.NODE_ENV !== 'production'
 
 const store = new Vuex.Store({
-  getters,
   actions,
+  getters,
   modules: {
     auth,
   },
   strict: debug,
+  plugins: [],
 })
 
 if (module.hot) {
@@ -28,7 +29,7 @@ if (module.hot) {
     store.hotUpdate({
       getters: require('./getters'),
       actions: require('./actions'),
-      modules: require('./modules/auth'),
+      authModules: require('./modules/auth'),
     })
   })
   /* eslint-enable */

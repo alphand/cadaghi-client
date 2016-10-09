@@ -37,6 +37,6 @@ const mutations = {
 }
 
 export default {
-  initialState,
+  state: initialState,
   mutations,
 }
