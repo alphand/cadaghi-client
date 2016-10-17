@@ -18,7 +18,7 @@ export const getGithubEmail = ({ commit }, token) => {
       commit(types.PROFILE_GITHUB_SUCCESS, data.body)
     })
     .catch((err) => {
-      console.log(err)
+      commit(types.PROFILE_GITHUB_FAILURE, err)
     })
 }
 
@@ -31,7 +31,6 @@ export const getGithubToken = ({ commit }, githubCode) => {
       getGithubEmail({ commit }, resp.access_token)
     })
     .catch((err) => {
-      console.log('err', err)
       commit(types.AUTH_LOGIN_FAILURE, err)
     })
 }

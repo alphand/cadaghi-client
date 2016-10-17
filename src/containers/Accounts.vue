@@ -16,6 +16,7 @@
       </pre>
 
       <Card>
+        something inside the card
       </Card>
     </div>
   </div>
@@ -52,7 +53,6 @@
     },
     created() {
       const code = this.$route.query.code
-      console.log('component is created', code, this.user)
       this.getGithubToken(code)
     },
   }

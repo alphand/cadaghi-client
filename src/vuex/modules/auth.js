@@ -26,10 +26,10 @@ const mutations = {
   [types.AUTH_GITHUB_SUCCESS](state, token) {
     state.authStatus = 'success'
     state.user.token = token.access_token
-    console.log('got token', state.user)
   },
   [types.PROFILE_GITHUB_REQUEST]() {
-    console.log('gh request')
+  },
+  [types.PROFILE_GITHUB_FAILURE]() {
   },
   [types.PROFILE_GITHUB_SUCCESS](state, user) {
     state.user.email = user[0].email
